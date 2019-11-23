@@ -1,0 +1,455 @@
+/*
+# Margin classes
+*
+* Margin sizes are 0 (none), xs, s, m and l, as well as a for auto.
+*
+* Direction indicators are l (left), r (right), t (top), b (bottom)
+*
+* Classes are .m-direction-size. The classes without a direction apply to all
+* directions, but are ordered so they can be overridden by more specific
+* classes.
+*
+* All of the classes have a -tablet version that applies at mobile sizes, and
+* overrides the large-screen default.
+*/
+
+.m-a {
+  margin: auto !important;
+}
+
+.m-0 {
+  margin: 0px !important;
+}
+
+.m-0-a {
+  margin: 0px auto !important;
+}
+
+.m-xs {
+  margin: calc(var(--line-height) * 0.25) !important;
+}
+
+.m-s {
+  margin: calc(var(--line-height) * 0.5) !important;
+}
+
+.m-m {
+  margin: calc(var(--line-height) * 1) !important;
+}
+
+.m-l {
+  margin: calc(var(--line-height) * 1.5) !important;
+}
+
+.m-xl {
+  margin: calc(var(--line-height) * 2) !important;
+}
+
+.m-l-a {
+  margin-left: auto !important;
+}
+
+.m-l-0 {
+  margin-left: 0px !important;
+}
+
+.m-l-xs {
+  margin-left: calc(var(--line-height) * 0.25) !important;
+}
+
+.m-l-s {
+  margin-left: calc(var(--line-height) * 0.5) !important;
+}
+
+.m-l-m {
+  margin-left: calc(var(--line-height) * 1) !important;
+}
+
+.m-l-l {
+  margin-left: calc(var(--line-height) * 1.5) !important;
+}
+
+.m-l-xl {
+  margin-left: calc(var(--line-height) * 2) !important;
+}
+
+.m-r-a {
+  margin-right: auto !important;
+}
+
+.m-r-0 {
+  margin-right: 0px !important;
+}
+
+.m-r-xs {
+  margin-right: calc(var(--line-height) * 0.25) !important;
+}
+
+.m-r-s {
+  margin-right: calc(var(--line-height) * 0.5) !important;
+}
+
+.m-r-m {
+  margin-right: calc(var(--line-height) * 1) !important;
+}
+
+.m-r-l {
+  margin-right: calc(var(--line-height) * 1.5) !important;
+}
+
+.m-r-xl {
+  margin-right: calc(var(--line-height) * 2) !important;
+}
+
+.m-b-a {
+  margin-bottom: auto !important;
+}
+
+.m-b-0 {
+  margin-bottom: 0 !important;
+}
+
+.m-b-xs {
+  margin-bottom: calc(var(--line-height) * 0.25) !important;
+}
+
+.m-b-s {
+  margin-bottom: calc(var(--line-height) * 0.5) !important;
+}
+
+.m-b-m {
+  margin-bottom: calc(var(--line-height) * 1) !important;
+}
+
+.m-b-l {
+  margin-bottom: calc(var(--line-height) * 1.5) !important;
+}
+
+.m-b-xl {
+  margin-bottom: calc(var(--line-height) * 2) !important;
+}
+
+.m-t-a {
+  margin-top: auto !important;
+}
+
+.m-t-0 {
+  margin-top: 0px !important;
+}
+
+.m-t-xs {
+  margin-top: calc(var(--line-height) * 0.25) !important;
+}
+
+.m-t-s {
+  margin-top: calc(var(--line-height) * 0.5) !important;
+}
+
+.m-t-m {
+  margin-top: calc(var(--line-height) * 1) !important;
+}
+
+.m-t-l {
+  margin-top: calc(var(--line-height) * 1.5) !important;
+}
+
+.m-t-xl {
+  margin-top: calc(var(--line-height) * 2) !important;
+}
+
+@media screen and (max-width: 900px) {
+  .m-max-content-width {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .m-a-tablet {
+    margin: auto !important;
+  }
+
+  .m-0-tablet {
+    margin: 0px !important;
+  }
+
+  .m-0-a-tablet {
+    margin: 0px auto !important;
+  }
+
+  .m-xs-tablet {
+    margin: calc(var(--line-height) * 0.25) !important;
+  }
+
+  .m-s-tablet {
+    margin: calc(var(--line-height) * 0.5) !important;
+  }
+
+  .m-m-tablet {
+    margin: calc(var(--line-height) * 1) !important;
+  }
+
+  .m-l-tablet {
+    margin: calc(var(--line-height) * 1.5) !important;
+  }
+
+  .m-xl-tablet {
+    margin: calc(var(--line-height) * 2) !important;
+  }
+
+  .m-l-a-tablet {
+    margin-left: auto !important;
+  }
+
+  .m-l-0-tablet {
+    margin-left: 0px !important;
+  }
+
+  .m-l-xs-tablet {
+    margin-left: calc(var(--line-height) * 0.25) !important;
+  }
+
+  .m-l-s-tablet {
+    margin-left: calc(var(--line-height) * 0.5) !important;
+  }
+
+  .m-l-m-tablet {
+    margin-left: calc(var(--line-height) * 1) !important;
+  }
+
+  .m-l-l-tablet {
+    margin-left: calc(var(--line-height) * 1.5) !important;
+  }
+
+  .m-l-xl-tablet {
+    margin-left: calc(var(--line-height) * 2) !important;
+  }
+
+  .m-r-a-tablet {
+    margin-right: auto !important;
+  }
+
+  .m-r-0-tablet {
+    margin-right: 0px !important;
+  }
+
+  .m-r-xs-tablet {
+    margin-right: calc(var(--line-height) * 0.25) !important;
+  }
+
+  .m-r-s-tablet {
+    margin-right: calc(var(--line-height) * 0.5) !important;
+  }
+
+  .m-r-m-tablet {
+    margin-right: calc(var(--line-height) * 1) !important;
+  }
+
+  .m-r-l-tablet {
+    margin-right: calc(var(--line-height) * 1.5) !important;
+  }
+
+  .m-r-xl-tablet {
+    margin-right: calc(var(--line-height) * 2) !important;
+  }
+
+  .m-b-a-tablet {
+    margin-bottom: auto !important;
+  }
+
+  .m-b-0-tablet {
+    margin-bottom: 0px !important;
+  }
+
+  .m-b-xs-tablet {
+    margin-bottom: calc(var(--line-height) * 0.25) !important;
+  }
+
+  .m-b-s-tablet {
+    margin-bottom: calc(var(--line-height) * 0.5) !important;
+  }
+
+  .m-b-m-tablet {
+    margin-bottom: calc(var(--line-height) * 1) !important;
+  }
+
+  .m-b-l-tablet {
+    margin-bottom: calc(var(--line-height) * 1.5) !important;
+  }
+
+  .m-b-xl-tablet {
+    margin-bottom: calc(var(--line-height) * 2) !important;
+  }
+
+  .m-t-0-tablet {
+    margin-top: 0px !important;
+  }
+
+  .m-t-a-tablet {
+    margin-top: auto !important;
+  }
+
+  .m-t-xs-tablet {
+    margin-top: calc(var(--line-height) * 0.25) !important;
+  }
+
+  .m-t-s-tablet {
+    margin-top: calc(var(--line-height) * 0.5) !important;
+  }
+
+  .m-t-m-tablet {
+    margin-top: calc(var(--line-height) * 1) !important;
+  }
+
+  .m-t-l-tablet {
+    margin-top: calc(var(--line-height) * 1.5) !important;
+  }
+
+  .m-t-xl-tablet {
+    margin-top: calc(var(--line-height) * 2) !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .m-a-phone {
+    margin: auto !important;
+  }
+
+  .m-0-phone {
+    margin: 0px !important;
+  }
+
+  .m-0-a-phone {
+    margin: 0px auto !important;
+  }
+
+  .m-xs-phone {
+    margin: calc(var(--line-height) * 0.25) !important;
+  }
+
+  .m-s-phone {
+    margin: calc(var(--line-height) * 0.5) !important;
+  }
+
+  .m-m-phone {
+    margin: calc(var(--line-height) * 1) !important;
+  }
+
+  .m-l-phone {
+    margin: calc(var(--line-height) * 1.5) !important;
+  }
+
+  .m-xl-phone {
+    margin: calc(var(--line-height) * 2) !important;
+  }
+
+  .m-l-a-phone {
+    margin-left: auto !important;
+  }
+
+  .m-l-0-phone {
+    margin-left: 0px !important;
+  }
+
+  .m-l-xs-phone {
+    margin-left: calc(var(--line-height) * 0.25) !important;
+  }
+
+  .m-l-s-phone {
+    margin-left: calc(var(--line-height) * 0.5) !important;
+  }
+
+  .m-l-m-phone {
+    margin-left: calc(var(--line-height) * 1) !important;
+  }
+
+  .m-l-l-phone {
+    margin-left: calc(var(--line-height) * 1.5) !important;
+  }
+
+  .m-l-xl-phone {
+    margin-left: calc(var(--line-height) * 2) !important;
+  }
+
+  .m-r-a-phone {
+    margin-right: auto !important;
+  }
+
+  .m-r-0-phone {
+    margin-right: 0px !important;
+  }
+
+  .m-r-xs-phone {
+    margin-right: calc(var(--line-height) * 0.25) !important;
+  }
+
+  .m-r-s-phone {
+    margin-right: calc(var(--line-height) * 0.5) !important;
+  }
+
+  .m-r-m-phone {
+    margin-right: calc(var(--line-height) * 1) !important;
+  }
+
+  .m-r-l-phone {
+    margin-right: calc(var(--line-height) * 1.5) !important;
+  }
+
+  .m-r-xl-phone {
+    margin-right: calc(var(--line-height) * 2) !important;
+  }
+
+  .m-b-a-phone {
+    margin-bottom: auto !important;
+  }
+
+  .m-b-0-phone {
+    margin-bottom: 0px !important;
+  }
+
+  .m-b-xs-phone {
+    margin-bottom: calc(var(--line-height) * 0.25) !important;
+  }
+
+  .m-b-s-phone {
+    margin-bottom: calc(var(--line-height) * 0.5) !important;
+  }
+
+  .m-b-m-phone {
+    margin-bottom: calc(var(--line-height) * 1) !important;
+  }
+
+  .m-b-l-phone {
+    margin-bottom: calc(var(--line-height) * 1.5) !important;
+  }
+
+  .m-b-xl-phone {
+    margin-bottom: calc(var(--line-height) * 2) !important;
+  }
+
+  .m-t-0-phone {
+    margin-top: 0px !important;
+  }
+
+  .m-t-a-phone {
+    margin-top: auto !important;
+  }
+
+  .m-t-xs-phone {
+    margin-top: calc(var(--line-height) * 0.25) !important;
+  }
+
+  .m-t-s-phone {
+    margin-top: calc(var(--line-height) * 0.5) !important;
+  }
+
+  .m-t-m-phone {
+    margin-top: calc(var(--line-height) * 1) !important;
+  }
+
+  .m-t-l-phone {
+    margin-top: calc(var(--line-height) * 1.5) !important;
+  }
+
+  .m-t-xl-phone {
+    margin-top: calc(var(--line-height) * 2) !important;
+  }
+}

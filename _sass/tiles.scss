@@ -1,0 +1,47 @@
+.tile-container-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.tile-container-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.tile-container-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.tile-spacing-5 {
+  grid-gap: 5px !important;
+}
+
+.tile-spacing-20 {
+  grid-gap: 20px !important;
+}
+
+@media screen and (max-width: 600px) {
+    .tile-container-1-mobile {
+        grid-template-columns: 1fr;
+    }
+
+    .tile-container-2-mobile {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tile-spacing-5-mobile {
+        grid-gap: 5px !important;
+    }
+
+    .tile-spacing-10-mobile {
+        grid-gap: 10px !important;
+    }
+
+    .tile-spacing-20-mobile {
+        grid-gap: 20px !important;
+    }
+}

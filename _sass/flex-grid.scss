@@ -1,0 +1,974 @@
+/*
+# Grid classes
+*/
+
+/*
+## Flex Container
+*/
+
+/*
+`.flex-row` (and breakpoints) creates a row-group, the parent of flex items laid out in horizontal rows. This is the basis of both the grid layout system when combined with `.flex-gutters` and with `.flex-wrap` can handle fluid layouts.
+*/
+.flex-row {
+  display: flex !important;
+  flex-direction: row;
+}
+
+/*
+`.flex-col` (and breakpoints) creates a column-group, the parent of flex items laid out in vertical columns. Its use is rare, and mostly for tightly-packed situations or making full-height space-filling columns.
+*/
+.flex-col {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.flex-row > *,
+.flex-col > * {
+  flex: 0 0 auto;
+}
+
+@media screen and (max-width: 900px) {
+  .flex-row-tablet {
+    display: flex !important;
+    flex-direction: row;
+  }
+
+  .flex-col-tablet {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .flex-row-tablet > *,
+  .flex-col-tablet > * {
+    flex: 0 0 auto;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .flex-row-phone {
+    display: flex !important;
+    flex-direction: row;
+  }
+
+  .flex-col-phone {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .flex-row-phone > *,
+  .flex-col-phone > * {
+    flex: 0 0 auto;
+  }
+}
+
+/*
+`.flex-inline` adds to `.flex-row` or `.flex-col` to make an inline component that can be used in text layout modes.
+*/
+.flex-inline {
+  display: inline-flex !important;
+}
+
+/*
+## Flex Container Properties
+*/
+
+/*
+`.flex-gutters` on a `.flex-row` starts a 'flex layout', with gap-separated columns, suitable for laying out entire pages.
+*/
+.flex-row.flex-gutters {
+  --gutters: 30px;
+  --bleed: 0px;
+  margin-left: calc(var(--gutters) / 2 * -1);
+  margin-right: calc(var(--gutters) / 2 * -1);
+}
+
+.flex-row.flex-gutters > * {
+  box-sizing: border-box;
+  padding-left: calc(var(--gutters) / 2);
+  padding-right: calc(var(--gutters) / 2);
+}
+
+.flex-row.flex-gutters > * > .flex-row.flex-gutters {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.flex-row.flex-gutters-s {
+  --gutters: 10px;
+}
+
+/*
+`.flex-wrap` enables fluid layouts, where sizes of elements varied with breakpoints can cause a reflow and lay out the content differently on mobile and desktop with ease.
+*/
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/*
+`.flex-nowrap` overrides `.flex-wrap`. Its use is very limited.
+*/
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+/*
+`.flex-justify-{start,end,center,space-between,space-around,space-evenly,stretch}` (and breakpoints) position the elements along the main axis of the flex (that is, horizontally on a `.flex-row`)
+*/
+
+.flex-justify-start {
+  justify-content: flex-start !important;
+}
+
+.flex-justify-end {
+  justify-content: flex-end !important;
+}
+
+.flex-justify-center {
+  justify-content: center !important;
+}
+
+.flex-justify-space-between {
+  justify-content: space-between !important;
+}
+
+.flex-justify-space-around {
+  justify-content: space-around !important;
+}
+
+.flex-justify-space-evenly {
+  justify-content: space-evenly !important;
+}
+
+.flex-justify-stretch {
+  justify-content: stretch !important;
+}
+
+/*
+`.flex-align-items-{start,end,center,stretch,baseline}` (and breakpoints) align items across the main axis of the flex (That is, vertically on a `.flex-row`)
+
+Specifically `.flex-align-items-stretch` is useful to make equal-height columns or to make the contents fill the space.
+*/
+
+.flex-align-items-start {
+  align-items: flex-start !important;
+}
+
+.flex-align-items-end {
+  align-items: flex-end !important;
+}
+
+.flex-align-items-center {
+  align-items: center !important;
+}
+
+.flex-align-items-stretch {
+  align-items: stretch !important;
+}
+
+.flex-align-items-baseline {
+  align-items: baseline !important;
+}
+
+/*
+`.flex-align-content-{start,end,center,space-between,space-around,stretch} (and breakpoints) align the rows (or columns) across the main axis. It has no effect on a non `.flex-wrap` element, but is useful for spacing out the rows or columns of a component.
+*/
+.flex-align-content-start {
+  align-content: flex-start !important;
+}
+
+.flex-align-content-end {
+  align-content: flex-end !important;
+}
+
+.flex-align-content-center {
+  align-content: center !important;
+}
+
+.flex-align-content-space-between {
+  align-content: space-between !important;
+}
+
+.flex-align-content-space-around {
+  align-content: space-around !important;
+}
+
+.flex-align-content-stretch {
+  align-content: stretch !important;
+}
+
+@media screen and (max-width: 900px) {
+  .flex-row.flex-gutters,
+  .flex-row-tablet.flex-gutters {
+    --gutters: 20px;
+  }
+
+  .flex-row.flex-gutters > *,
+  .flex-row-tablet.flex-gutters > * {
+    box-sizing: border-box;
+  }
+
+  .flex-row-tablet.flex-gutters > * > .flex-row.flex-gutters,
+  .flex-row.flex-gutters > * > .flex-row-tablet.flex-gutters,
+  .flex-row-tablet.flex-gutters > * > .flex-row-tablet.flex-gutters {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .flex-wrap-tablet {
+    flex-wrap: wrap;
+  }
+
+  .flex-nowrap-tablet {
+    flex-wrap: nowrap;
+  }
+
+  .flex-justify-start-tablet {
+    justify-content: flex-start !important;
+  }
+
+  .flex-justify-end-tablet {
+    justify-content: flex-end !important;
+  }
+
+  .flex-justify-center-tablet {
+    justify-content: center !important;
+  }
+
+  .flex-justify-space-between-tablet {
+    justify-content: space-between !important;
+  }
+
+  .flex-justify-space-around-tablet {
+    justify-content: space-around !important;
+  }
+
+  .flex-justify-space-evenly-tablet {
+    justify-content: space-evenly !important;
+  }
+
+  .flex-justify-stretch-tablet {
+    justify-content: stretch !important;
+  }
+
+  .flex-align-items-start-tablet {
+    align-items: flex-start !important;
+  }
+
+  .flex-align-items-end-tablet {
+    align-items: flex-end !important;
+  }
+
+  .flex-align-items-center-tablet {
+    align-items: center !important;
+  }
+
+  .flex-align-items-stretch-tablet {
+    align-items: stretch !important;
+  }
+
+  .flex-align-items-baseline-tablet {
+    align-items: baseline !important;
+  }
+
+  .flex-align-content-start-tablet {
+    align-content: flex-start !important;
+  }
+
+  .flex-align-content-end-tablet {
+    align-content: flex-end !important;
+  }
+
+  .flex-align-content-center-tablet {
+    align-content: center !important;
+  }
+
+  .flex-align-content-space-between-tablet {
+    align-content: space-between !important;
+  }
+
+  .flex-align-content-space-around-tablet {
+    align-content: space-around !important;
+  }
+
+  .flex-align-content-stretch-tablet {
+    align-content: stretch !important;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .flex-row.flex-gutters,
+  .flex-row-tablet.flex-gutters,
+  .flex-row-phone.flex-gutters {
+    --gutters: 4px;
+  }
+
+  .flex-row-phone.flex-gutters > * {
+    box-sizing: border-box;
+  }
+
+  .flex-row-phone.flex-gutters > * > .flex-row.flex-gutters,
+  .flex-row-phone.flex-gutters > * > .flex-row-tablet.flex-gutters,
+  .flex-row-phone.flex-gutters > * > .flex-row-phone.flex-gutters,
+  .flex-row.flex-gutters > * > .flex-row-phone.flex-gutters,
+  .flex-row-tablet.flex-gutters > * > .flex-row-phone.flex-gutters {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .flex-wrap-phone {
+    flex-wrap: wrap;
+  }
+
+  .flex-nowrap-phone {
+    flex-wrap: nowrap;
+  }
+
+  .flex-justify-start-phone {
+    justify-content: flex-start !important;
+  }
+
+  .flex-justify-end-phone {
+    justify-content: flex-end !important;
+  }
+
+  .flex-justify-center-phone {
+    justify-content: center !important;
+  }
+
+  .flex-justify-space-between-phone {
+    justify-content: space-between !important;
+  }
+
+  .flex-justify-space-around-phone {
+    justify-content: space-around !important;
+  }
+
+  .flex-justify-space-evenly-phone {
+    justify-content: space-evenly !important;
+  }
+
+  .flex-justify-stretch-phone {
+    justify-content: stretch !important;
+  }
+
+  .flex-align-items-start-phone {
+    align-items: flex-start !important;
+  }
+
+  .flex-align-items-end-phone {
+    align-items: flex-end !important;
+  }
+
+  .flex-align-items-center-phone {
+    align-items: center !important;
+  }
+
+  .flex-align-items-stretch-phone {
+    align-items: stretch !important;
+  }
+
+  .flex-align-items-baseline-phone {
+    align-items: baseline !important;
+  }
+
+  .flex-align-content-start-phone {
+    align-content: flex-start !important;
+  }
+
+  .flex-align-content-end-phone {
+    align-content: flex-end !important;
+  }
+
+  .flex-align-content-center-phone {
+    align-content: center !important;
+  }
+
+  .flex-align-content-space-between-phone {
+    align-content: space-between !important;
+  }
+
+  .flex-align-content-space-around-phone {
+    align-content: space-around !important;
+  }
+
+  .flex-align-content-stretch-phone {
+    align-content: stretch !important;
+  }
+}
+
+/*
+## Flex Grid Sizes
+
+The flex grid is arranged for width only, so only applicable to the children of a `.flex-row`.
+*/
+
+/*
+`.flex-auto` is the default size, but once in a while might need to be overridden back to its default.
+*/
+.flex-auto {
+  flex-basis: auto;
+}
+
+/*
+`.flex-0` makes a flex item with a zero natural size, it will collapse all the way to 0 width. It's mostly useful for space-filling empty elements in a space-filling component like a masthead.
+*/
+.flex-0 {
+  flex-basis: 0;
+}
+
+/*
+`.flex-X-Y` (and breakpoints for Y up to 8). The maximum denominator has all the possible numerators (1/12 to 12/12 on large screens, 1/8 to 8/8 on smaller) as irregular fractions; all other smaller fractions are regular (such as 3/5 and 1/3). Fractions range from 1/1 to 1/12 with no breakpoint and from 1/1 to 1/8 at smaller breakpoints.
+
+When subdividing containers with gutters, use `.flex-X-Y` where Y is equal to the X of its parent flex item. That is, `.flex-row > .flex-7-12 > .flex-row > .flex-3-7` is a normal nesting of elements. Using divisions of 7 inside a 7/12 element keeps the overall 12-column grid.
+*/
+.flex-1-12 {
+  flex-basis: calc((99.99% / 12 * 1) + var(--bleed, 0px));
+}
+
+.flex-2-12 {
+  flex-basis: calc((99.99% / 12 * 2) + var(--bleed, 0px));
+}
+
+.flex-3-12 {
+  flex-basis: calc((99.99% / 12 * 3) + var(--bleed, 0px));
+}
+
+.flex-4-12 {
+  flex-basis: calc((99.99% / 12 * 4) + var(--bleed, 0px));
+}
+
+.flex-5-12 {
+  flex-basis: calc((99.99% / 12 * 5) + var(--bleed, 0px));
+}
+
+.flex-6-12 {
+  flex-basis: calc((99.99% / 12 * 6) + var(--bleed, 0px));
+}
+
+.flex-7-12 {
+  flex-basis: calc((99.99% / 12 * 7) + var(--bleed, 0px));
+}
+
+.flex-8-12 {
+  flex-basis: calc((99.99% / 12 * 8) + var(--bleed, 0px));
+}
+
+.flex-9-12 {
+  flex-basis: calc((99.99% / 12 * 9) + var(--bleed, 0px));
+}
+
+.flex-10-12 {
+  flex-basis: calc((99.99% / 12 * 10) + var(--bleed, 0px));
+}
+
+.flex-11-12 {
+  flex-basis: calc((99.99% / 12 * 11) + var(--bleed, 0px));
+}
+
+.flex-12-12 {
+  flex-basis: calc((99.99% / 12 * 12) + var(--bleed, 0px));
+}
+
+.flex-1-11 {
+  flex-basis: calc((99.99% / 11 * 1) + var(--bleed, 0px));
+}
+
+.flex-2-11 {
+  flex-basis: calc((99.99% / 11 * 2) + var(--bleed, 0px));
+}
+
+.flex-3-11 {
+  flex-basis: calc((99.99% / 11 * 3) + var(--bleed, 0px));
+}
+
+.flex-4-11 {
+  flex-basis: calc((99.99% / 11 * 4) + var(--bleed, 0px));
+}
+
+.flex-5-11 {
+  flex-basis: calc((99.99% / 11 * 5) + var(--bleed, 0px));
+}
+
+.flex-6-11 {
+  flex-basis: calc((99.99% / 11 * 6) + var(--bleed, 0px));
+}
+
+.flex-7-11 {
+  flex-basis: calc((99.99% / 11 * 7) + var(--bleed, 0px));
+}
+
+.flex-8-11 {
+  flex-basis: calc((99.99% / 11 * 8) + var(--bleed, 0px));
+}
+
+.flex-9-11 {
+  flex-basis: calc((99.99% / 11 * 9) + var(--bleed, 0px));
+}
+
+.flex-10-11 {
+  flex-basis: calc((99.99% / 11 * 10) + var(--bleed, 0px));
+}
+
+.flex-1-10 {
+  flex-basis: calc((99.99% / 10 * 1) + var(--bleed, 0px));
+}
+
+.flex-3-10 {
+  flex-basis: calc((99.99% / 10 * 3) + var(--bleed, 0px));
+}
+
+.flex-5-10 {
+  flex-basis: calc((99.99% / 10 * 5) + var(--bleed, 0px));
+}
+
+.flex-7-10 {
+  flex-basis: calc((99.99% / 10 * 7) + var(--bleed, 0px));
+}
+
+.flex-9-10 {
+  flex-basis: calc((99.99% / 10 * 9) + var(--bleed, 0px));
+}
+
+.flex-1-9 {
+  flex-basis: calc((99.99% / 9 * 1) + var(--bleed, 0px));
+}
+
+.flex-2-9 {
+  flex-basis: calc((99.99% / 9 * 2) + var(--bleed, 0px));
+}
+
+.flex-4-9 {
+  flex-basis: calc((99.99% / 9 * 4) + var(--bleed, 0px));
+}
+
+.flex-5-9 {
+  flex-basis: calc((99.99% / 9 * 5) + var(--bleed, 0px));
+}
+
+.flex-7-9 {
+  flex-basis: calc((99.99% / 9 * 7) + var(--bleed, 0px));
+}
+
+.flex-8-9 {
+  flex-basis: calc((99.99% / 9 * 8) + var(--bleed, 0px));
+}
+
+.flex-1-8 {
+  flex-basis: calc((99.99% / 8 * 1) + var(--bleed, 0px));
+}
+
+.flex-3-8 {
+  flex-basis: calc((99.99% / 8 * 3) + var(--bleed, 0px));
+}
+
+.flex-5-8 {
+  flex-basis: calc((99.99% / 8 * 5) + var(--bleed, 0px));
+}
+
+.flex-7-8 {
+  flex-basis: calc((99.99% / 8 * 7) + var(--bleed, 0px));
+}
+
+.flex-1-7 {
+  flex-basis: calc((99.99% / 7 * 1) + var(--bleed, 0px));
+}
+
+.flex-2-7 {
+  flex-basis: calc((99.99% / 7 * 2) + var(--bleed, 0px));
+}
+
+.flex-3-7 {
+  flex-basis: calc((99.99% / 7 * 3) + var(--bleed, 0px));
+}
+
+.flex-4-7 {
+  flex-basis: calc((99.99% / 7 * 4) + var(--bleed, 0px));
+}
+
+.flex-5-7 {
+  flex-basis: calc((99.99% / 7 * 5) + var(--bleed, 0px));
+}
+
+.flex-6-7 {
+  flex-basis: calc((99.99% / 7 * 6) + var(--bleed, 0px));
+}
+
+.flex-1-6 {
+  flex-basis: calc((99.99% / 6 * 1) + var(--bleed, 0px));
+}
+
+.flex-5-6 {
+  flex-basis: calc((99.99% / 6 * 5) + var(--bleed, 0px));
+}
+
+.flex-1-5 {
+  flex-basis: calc((99.99% / 5 * 1) + var(--bleed, 0px));
+}
+
+.flex-2-5 {
+  flex-basis: calc((99.99% / 5 * 2) + var(--bleed, 0px));
+}
+
+.flex-3-5 {
+  flex-basis: calc((99.99% / 5 * 3) + var(--bleed, 0px));
+}
+
+.flex-4-5 {
+  flex-basis: calc((99.99% / 5 * 4) + var(--bleed, 0px));
+}
+
+.flex-1-4 {
+  flex-basis: calc((99.99% / 4 * 1) + var(--bleed, 0px));
+}
+
+.flex-3-4 {
+  flex-basis: calc((99.99% / 4 * 3) + var(--bleed, 0px));
+}
+
+.flex-1-3 {
+  flex-basis: calc((99.99% / 3 * 1) + var(--bleed, 0px));
+}
+
+.flex-2-3 {
+  flex-basis: calc((99.99% / 3 * 2) + var(--bleed, 0px));
+}
+
+.flex-1-2 {
+  flex-basis: calc((99.99% / 2) + var(--bleed, 0px));
+}
+
+.flex-1-1 {
+  flex-basis: 99.99%;
+}
+
+@media screen and (max-width: 900px) {
+  .flex-auto-tablet {
+    flex-basis: auto;
+  }
+
+  .flex-0-tablet {
+    flex-basis: 0;
+  }
+
+  .flex-1-8-tablet {
+    flex-basis: calc((99.99% / 8 * 1) + var(--bleed, 0px));
+  }
+
+  .flex-2-8-tablet {
+    flex-basis: calc((99.99% / 8 * 2) + var(--bleed, 0px));
+  }
+
+  .flex-3-8-tablet {
+    flex-basis: calc((99.99% / 8 * 3) + var(--bleed, 0px));
+  }
+
+  .flex-4-8-tablet {
+    flex-basis: calc((99.99% / 8 * 4) + var(--bleed, 0px));
+  }
+
+  .flex-5-8-tablet {
+    flex-basis: calc((99.99% / 8 * 5) + var(--bleed, 0px));
+  }
+
+  .flex-6-8-tablet {
+    flex-basis: calc((99.99% / 8 * 6) + var(--bleed, 0px));
+  }
+
+  .flex-7-8-tablet {
+    flex-basis: calc((99.99% / 8 * 7) + var(--bleed, 0px));
+  }
+
+  .flex-8-8-tablet {
+    flex-basis: calc((99.99% / 8 * 8) + var(--bleed, 0px));
+  }
+
+  .flex-1-7-tablet {
+    flex-basis: calc((99.99% / 7 * 1) + var(--bleed, 0px));
+  }
+
+  .flex-2-7-tablet {
+    flex-basis: calc((99.99% / 7 * 2) + var(--bleed, 0px));
+  }
+
+  .flex-3-7-tablet {
+    flex-basis: calc((99.99% / 7 * 3) + var(--bleed, 0px));
+  }
+
+  .flex-4-7-tablet {
+    flex-basis: calc((99.99% / 7 * 4) + var(--bleed, 0px));
+  }
+
+  .flex-5-7-tablet {
+    flex-basis: calc((99.99% / 7 * 5) + var(--bleed, 0px));
+  }
+
+  .flex-6-7-tablet {
+    flex-basis: calc((99.99% / 7 * 6) + var(--bleed, 0px));
+  }
+
+  .flex-1-6-tablet {
+    flex-basis: calc((99.99% / 6 * 1) + var(--bleed, 0px));
+  }
+
+  .flex-5-6-tablet {
+    flex-basis: calc((99.99% / 6 * 5) + var(--bleed, 0px));
+  }
+
+  .flex-1-5-tablet {
+    flex-basis: calc((99.99% / 5 * 1) + var(--bleed, 0px));
+  }
+
+  .flex-2-5-tablet {
+    flex-basis: calc((99.99% / 5 * 2) + var(--bleed, 0px));
+  }
+
+  .flex-3-5-tablet {
+    flex-basis: calc((99.99% / 5 * 3) + var(--bleed, 0px));
+  }
+
+  .flex-4-5-tablet {
+    flex-basis: calc((99.99% / 5 * 4) + var(--bleed, 0px));
+  }
+
+  .flex-1-4-tablet {
+    flex-basis: calc((99.99% / 4 * 1) + var(--bleed, 0px));
+  }
+
+  .flex-3-4-tablet {
+    flex-basis: calc((99.99% / 4 * 3) + var(--bleed, 0px));
+  }
+
+  .flex-1-3-tablet {
+    flex-basis: calc((99.99% / 3 * 1) + var(--bleed, 0px));
+  }
+
+  .flex-2-3-tablet {
+    flex-basis: calc((99.99% / 3 * 2) + var(--bleed, 0px));
+  }
+
+  .flex-1-2-tablet {
+    flex-basis: calc((99.99% / 2) + var(--bleed, 0px));
+  }
+
+  .flex-1-1-tablet {
+    flex-basis: 99.99%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .flex-auto-phone {
+    flex-basis: auto;
+  }
+
+  .flex-0-phone {
+    flex-basis: 0;
+  }
+
+  .flex-1-8-phone {
+    flex-basis: calc((99.99% / 8 * 1) + var(--bleed, 0px));
+  }
+
+  .flex-2-8-phone {
+    flex-basis: calc((99.99% / 8 * 2) + var(--bleed, 0px));
+  }
+
+  .flex-3-8-phone {
+    flex-basis: calc((99.99% / 8 * 3) + var(--bleed, 0px));
+  }
+
+  .flex-4-8-phone {
+    flex-basis: calc((99.99% / 8 * 4) + var(--bleed, 0px));
+  }
+
+  .flex-5-8-phone {
+    flex-basis: calc((99.99% / 8 * 5) + var(--bleed, 0px));
+  }
+
+  .flex-6-8-phone {
+    flex-basis: calc((99.99% / 8 * 6) + var(--bleed, 0px));
+  }
+
+  .flex-7-8-phone {
+    flex-basis: calc((99.99% / 8 * 7) + var(--bleed, 0px));
+  }
+
+  .flex-8-8-phone {
+    flex-basis: calc((99.99% / 8 * 8) + var(--bleed, 0px));
+  }
+
+  .flex-1-7-phone {
+    flex-basis: calc((99.99% / 7 * 1) + var(--bleed, 0px));
+  }
+
+  .flex-2-7-phone {
+    flex-basis: calc((99.99% / 7 * 2) + var(--bleed, 0px));
+  }
+
+  .flex-3-7-phone {
+    flex-basis: calc((99.99% / 7 * 3) + var(--bleed, 0px));
+  }
+
+  .flex-4-7-phone {
+    flex-basis: calc((99.99% / 7 * 4) + var(--bleed, 0px));
+  }
+
+  .flex-5-7-phone {
+    flex-basis: calc((99.99% / 7 * 5) + var(--bleed, 0px));
+  }
+
+  .flex-6-7-phone {
+    flex-basis: calc((99.99% / 7 * 6) + var(--bleed, 0px));
+  }
+
+  .flex-1-6-phone {
+    flex-basis: calc((99.99% / 6 * 1) + var(--bleed, 0px));
+  }
+
+  .flex-5-6-phone {
+    flex-basis: calc((99.99% / 6 * 5) + var(--bleed, 0px));
+  }
+
+  .flex-1-5-phone {
+    flex-basis: calc((99.99% / 5 * 1) + var(--bleed, 0px));
+  }
+
+  .flex-2-5-phone {
+    flex-basis: calc((99.99% / 5 * 2) + var(--bleed, 0px));
+  }
+
+  .flex-3-5-phone {
+    flex-basis: calc((99.99% / 5 * 3) + var(--bleed, 0px));
+  }
+
+  .flex-4-5-phone {
+    flex-basis: calc((99.99% / 5 * 4) + var(--bleed, 0px));
+  }
+
+  .flex-1-4-phone {
+    flex-basis: calc((99.99% / 4 * 1) + var(--bleed, 0px));
+  }
+
+  .flex-3-4-phone {
+    flex-basis: calc((99.99% / 4 * 3) + var(--bleed, 0px));
+  }
+
+  .flex-1-3-phone {
+    flex-basis: calc((99.99% / 3 * 1) + var(--bleed, 0px));
+  }
+
+  .flex-2-3-phone {
+    flex-basis: calc((99.99% / 3 * 2) + var(--bleed, 0px));
+  }
+
+  .flex-1-2-phone {
+    flex-basis: calc((99.99% / 2) + var(--bleed, 0px));
+  }
+
+  .flex-1-1-phone {
+    flex-basis: calc(99.99% + var(--bleed, 0px));
+  }
+}
+
+/*
+## Flex Item Properties
+*/
+
+/*
+`.flex-grow` and `.flex-shrink` make elements fluid-sized, willing to grow and shrink to take up space respectively. Useful in densely packed layouts like mastheads.
+
+`.flex-fixed` is the opposite, but should rarely need to be used as it's the default for us.
+*/
+.flex-grow {
+  flex-grow: 1 !important;
+}
+
+.flex-shrink {
+  flex-shrink: 1 !important;
+}
+
+.flex-fixed {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+@media screen and (min-width: 641px) {
+  .flex-grow-tablet-plus {
+    flex-grow: 1 !important;
+  }
+  .flex-shrink-tablet-plus {
+    flex-shrink: 1 !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .flex-grow-tablet {
+    flex-grow: 1 !important;
+  }
+
+  .flex-shrink-tablet {
+    flex-shrink: 1 !important;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .flex-grow-phone {
+    flex-grow: 1 !important;
+  }
+
+  .flex-shrink-phone {
+    flex-shrink: 1 !important;
+  }
+
+  .flex-fixed-phone {
+    flex-grow: 0 !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+/*
+`.flex-align-self-{start,end,center,baseline,stretch}` make an item ignore its parents suggestions for alignment across the main axis (that is, vertically on a `.flex-row`) and instead use the positioning specified here.
+*/
+.flex-align-self-start {
+  align-self: flex-start;
+}
+
+.flex-align-self-end {
+  align-self: flex-end;
+}
+
+.flex-align-self-center {
+  align-self: center;
+}
+
+.flex-align-self-baseline {
+  align-self: baseline;
+}
+
+.flex-align-self-stretch {
+  align-self: stretch;
+}
+
+/*
+`.flex-first-{tablet,phone}` and `.flex-last-{tablet,phone}` allow a layout to be re-ordered on a smaller breakpoint. Useful for mastheads where navigation positioning relative to other elements changes.
+
+We only have first and last as anything more complex is hard to keep organized.
+*/
+@media screen and (max-width: 900px) {
+  .flex-first-tablet {
+    order: -1;
+  }
+
+  .flex-last-tablet {
+    order: 1;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .flex-first-phone {
+    order: -1;
+  }
+
+  .flex-last-phone {
+    order: 1;
+  }
+}
