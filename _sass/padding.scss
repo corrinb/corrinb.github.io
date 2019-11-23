@@ -154,6 +154,10 @@
   padding-top: calc(var(--line-height) * 3) !important;
 }
 
+.p-t-75 {
+    padding-top: 75px;
+}
+
 @media screen and (max-width: 900px) {
   .p-0-tablet {
     padding: 0px !important;

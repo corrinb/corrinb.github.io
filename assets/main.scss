@@ -10,3 +10,14 @@
 @import "tiles";
 @import "type";
 @import "type-utilities";
+
+// Default theme overrides
+.site-header {
+    position: fixed;
+    width: 100%;
+    background: white;
+}
+
+.page-content {
+    padding-top: 0;
+}
