@@ -1,0 +1,340 @@
+:root {
+  --line-height: 20px;
+  --line-spacing: 1;
+}
+
+.f-mont-11,
+.f-mont-14,
+.f-mont-19,
+.f-mont-26,
+.f-mont-34,
+.f-mont-45,
+.f-roboto-11,
+.f-roboto-14,
+.f-roboto-19,
+.f-roboto-26,
+.f-roboto-34,
+.f-roboto-45,
+.f-mont-11-tablet,
+.f-mont-14-tablet,
+.f-mont-19-tablet,
+.f-mont-26-tablet,
+.f-mont-34-tablet,
+.f-mont-45-tablet,
+.f-roboto-11-tablet,
+.f-roboto-14-tablet,
+.f-roboto-19-tablet,
+.f-roboto-26-tablet,
+.f-roboto-34-tablet,
+.f-roboto-45-tablet,
+.f-mont-11-phone,
+.f-mont-14-phone,
+.f-mont-19-phone,
+.f-mont-26-phone,
+.f-mont-34-phone,
+.f-mont-45-phone,
+.f-roboto-11-phone,
+.f-roboto-14-phone,
+.f-roboto-19-phone,
+.f-roboto-26-phone,
+.f-roboto-34-phone,
+.f-roboto-45-phone {
+  line-height: var(--line-height) !important;
+}
+
+.f-mont-11 {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 11px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+}
+.f-mont-14 {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+}
+.f-mont-19 {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 19px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+}
+.f-mont-26 {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 26px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  --line-height: 30px !important;
+}
+.f-mont-34 {
+  font-family: "Montserrat", serif !important;
+  font-size: 34px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  --line-height: 40px !important;
+}
+.f-mont-45 {
+  font-family: "Montserrat", serif !important;
+  font-size: 45px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  --line-height: 60px !important;
+}
+.f-roboto-11 {
+  font-family: "Roboto Slab", serif !important;
+  font-size: 11px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+}
+.f-roboto-14 {
+  font-family: "Roboto Slab", serif !important;
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+}
+.f-roboto-19 {
+  font-family: "Roboto Slab", serif !important;
+  font-size: 19px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+}
+.f-roboto-26 {
+  font-family: "Roboto Slab", serif !important;
+  font-size: 26px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  --line-height: 30px !important;
+}
+.f-roboto-34 {
+  font-family: "Roboto Slab", serif !important;
+  font-size: 34px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  --line-height: 40px !important;
+}
+.f-roboto-45 {
+  font-family: "Roboto Slab", serif !important;
+  font-size: 45px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  --line-height: 60px !important;
+}
+
+@media (max-width: 900px) {
+  .f-mont-11-tablet {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 11px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 20px !important;
+  }
+  .f-mont-14-tablet {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 14px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 20px !important;
+  }
+  .f-mont-19-tablet {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 19px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 20px !important;
+  }
+  .f-mont-26-tablet {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 26px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 30px !important;
+  }
+  .f-mont-34-tablet {
+    font-family: "Montserrat", serif !important;
+    font-size: 34px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 40px !important;
+  }
+  .f-mont-45-tablet {
+    font-family: "Montserrat", serif !important;
+    font-size: 45px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 60px !important;
+  }
+  .f-roboto-11-tablet {
+    font-family: "Roboto Slab", serif !important;
+    font-size: 11px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 20px !important;
+  }
+  .f-roboto-14-tablet {
+    font-family: "Roboto Slab", serif !important;
+    font-size: 14px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 20px !important;
+  }
+  .f-roboto-19-tablet {
+    font-family: "Roboto Slab", serif !important;
+    font-size: 19px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 20px !important;
+  }
+  .f-roboto-26-tablet {
+    font-family: "Roboto Slab", serif !important;
+    font-size: 26px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 30px !important;
+  }
+  .f-roboto-34-tablet {
+    font-family: "Roboto Slab", serif !important;
+    font-size: 34px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 40px !important;
+  }
+  .f-roboto-45-tablet {
+    font-family: "Roboto Slab", serif !important;
+    font-size: 45px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 60px !important;
+  }
+}
+@media (max-width: 640px) {
+  .f-mont-11-phone {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 11px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 20px !important;
+  }
+  .f-mont-14-phone {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 14px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 20px !important;
+  }
+  .f-mont-19-phone {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 19px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 20px !important;
+  }
+  .f-mont-26-phone {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 26px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 30px !important;
+  }
+  .f-mont-34-phone {
+    font-family: "Montserrat", serif !important;
+    font-size: 34px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 40px !important;
+  }
+  .f-mont-45-phone {
+    font-family: "Montserrat", serif !important;
+    font-size: 45px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 60px !important;
+  }
+  .f-roboto-11-phone {
+    font-family: "Roboto Slab", serif !important;
+    font-size: 11px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 20px !important;
+  }
+  .f-roboto-14-phone {
+    font-family: "Roboto Slab", serif !important;
+    font-size: 14px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 20px !important;
+  }
+  .f-roboto-19-phone {
+    font-family: "Roboto Slab", serif !important;
+    font-size: 19px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 20px !important;
+  }
+  .f-roboto-26-phone {
+    font-family: "Roboto Slab", serif !important;
+    font-size: 26px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 30px !important;
+  }
+  .f-roboto-34-phone {
+    font-family: "Roboto Slab", serif !important;
+    font-size: 34px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 40px !important;
+  }
+  .f-roboto-45-phone {
+    font-family: "Roboto Slab", serif !important;
+    font-size: 45px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    --line-height: 60px !important;
+  }
+}
+
+/* modifier classes */
+.f-light {
+  font-weight: 300 !important;
+}
+.f-bold {
+  font-weight: 600 !important;
+}
+.f-italic {
+  font-style: italic !important;
+}
+@media (max-width: 900px) {
+  .f-light-tablet {
+    font-weight: 300 !important;
+  }
+  .f-bold-tablet {
+    font-weight: 600 !important;
+  }
+  .f-italic-tablet {
+    font-style: italic !important;
+  }
+  .f-style-normal-tablet {
+    font-style: normal;
+  }
+  .f-weight-normal-tablet {
+    font-weight: 400 !important;
+  }
+}
+@media (max-width: 640px) {
+  .f-light-phone {
+    font-weight: 300 !important;
+  }
+  .f-bold-phone {
+    font-weight: 600 !important;
+  }
+  .f-italic-phone {
+    font-style: italic !important;
+  }
+  .f-style-normal-phone {
+    font-style: normal;
+  }
+  .f-weight-normal-phone {
+    font-weight: 400 !important;
+  }
+}
