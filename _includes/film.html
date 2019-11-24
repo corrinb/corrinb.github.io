@@ -1,0 +1,18 @@
+<h2>{{ include.film.title }}</h2>
+
+<div class="flex-row">
+  <iframe
+    title="vimeo-player"
+    src="https://player.vimeo.com/video/{{ include.film.video_id }}"
+    width="320"
+    height="180"
+    frameborder="0"
+    allowfullscreen
+  ></iframe>
+
+  <ul>
+    <li>{{ include.film.people }}</li>
+    <li>Shot on {{ include.film.film_type }}</li>
+    <li>Runtime {{ include.film.length }}</li>
+  </ul>
+</div>
