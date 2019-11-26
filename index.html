@@ -48,7 +48,21 @@ layout: home
 
 <!-- start films -->
 <section id="film" class="p-t-75">
-  <h1 class="f-mont-34 f-mont-26-phone">Film</h1>
+    <h1 class="f-mont-34 f-mont-26-phone">Film</h1>
+    <div class="tile-container-3 tile-container-1-mobile">
+      <div class="flex-row flex-align-items-center" style="background:pink; height: 300px; grid-column-start: 1;
+    grid-column-end: 3;">
+        <!-- film thumbnail here -->
+      </div>
+      <div>
+          <p class="f-roboto-19">Third Floor</p>
+          <p class="f-mont-14 m-b-xs">Corrin Barnes</p>
+          <p class="f-mont-14 m-b-xs">Shot on Super 8</p>
+          <p class="f-mont-14 m-b-xs">Runtime 8 minutes</p>
+          <a class="f-mont-14" href="#">view on vimeo</a>
+      </div>
+    </div>
+
   {% for film in site.data.films %} {% include film.html film=film %} {% endfor
   %}
 </section>
