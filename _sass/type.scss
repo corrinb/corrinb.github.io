@@ -39,7 +39,7 @@
 .f-roboto-26-phone,
 .f-roboto-34-phone,
 .f-roboto-45-phone {
-  line-height: var(--line-height) !important;
+line-height: calc(var(--line-spacing) * var(--line-height)) !important;
 }
 
 .f-mont-11 {
