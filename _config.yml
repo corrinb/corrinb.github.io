@@ -31,7 +31,6 @@ github_username: jekyll
 
 header_pages:
   - cv.html
-  - about.html
 
 # Build settings
 theme: minima
