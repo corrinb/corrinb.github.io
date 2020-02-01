@@ -1,0 +1,32 @@
+/*
+# Color classes
+*/
+:root {
+  --color-red: #993333;
+  --color-light-teal: #579999;
+  --color-dark-teal: #336666;
+}
+
+/*
+# Text colors
+*/
+.txt-red {
+  color: var(--color-red);
+}
+
+.txt-light-teal {
+  color: var(--color-light-teal);
+}
+
+.txt-dark-teal {
+  color: var(--color-dark-teal);
+}
+
+.link,
+.link:visited {
+    color: var(--color-light-teal) !important;
+}
+.link:hover,
+.link:focus {
+    color: var(--color-dark-teal) !important;
+}

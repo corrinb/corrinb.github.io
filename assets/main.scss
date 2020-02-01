@@ -3,6 +3,7 @@
 
 @import "minima";
 
+@import "colors";
 @import "flex-grid";
 @import "padding";
 @import "margins";
@@ -13,11 +14,19 @@
 
 // Default theme overrides
 .site-header {
-    position: fixed;
-    width: 100%;
-    background: white;
+  position: fixed;
+  width: 100%;
+  background: white;
 }
 
 .page-content {
-    padding-top: 0;
+  padding-top: 0;
+}
+
+.site-title,
+.site-title:visited,
+.site-title:hover {
+  font-family: "Roboto Slab", serif !important;
+  color: var(--color-red);
+  text-decoration: none;
 }
